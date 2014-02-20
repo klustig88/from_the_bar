@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
+ 
+  def create
 
-  def index
   end
-
 end
