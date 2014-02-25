@@ -31,6 +31,12 @@ gem "faker", "~> 1.2.0"
 
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+gem 'bootstrap-sass'
+
+group :development do
+  gem 'rails_layout'
+end
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
