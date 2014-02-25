@@ -1,7 +1,7 @@
 <div class='sign_up_or_in'>
   <div class='col-md-10'>
     <div class='col-md-4'>
-      <button type="button" class="btn btn-primary btn-lg">Create User</button> 
+      <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Create User</button> 
     </div>
     <div class='col-md-2'>
       Or
@@ -11,3 +11,47 @@
     </div>
   </div> 
 </div> 
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Create User</h4>
+      </div>
+
+      <div class="modal-body">
+        <%= form_for :user, url: users_path do |f| %>
+          <p>
+            <%= f.label :username %><br>
+            <%= f.text_field :username %>
+          </p>  
+
+          <p>
+            <%= f.label :email %><br>
+            <%= f.text_field :email %>
+          </p>  
+
+          <p>
+            <%= f.label :password %><br>
+            <%= f.password_field :password %>
+          </p>
+
+          <p>
+            <%= f.label :password_confirmation %><br>
+            <%= f.password_field :password_confirmation %>
+          </p>
+
+          <p>
+            <%= f.submit "Create Profile" %>
+          </p>
+        <% end %>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
