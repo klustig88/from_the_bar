@@ -15,7 +15,3 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
-
-$('#signModalLabel').modal({
-  keyboard: false
-})
